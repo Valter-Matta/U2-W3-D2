@@ -15,8 +15,9 @@ removeButton.addEventListener('click', () => {
     const memory = localStorage.getItem(key)
     console.log(memory)
     const utenti = JSON.parse(memory)
-    localStorage.removeItem('key')
+    // localStorage.removeItem(key)
     utenti.pop()
+    localStorage.setItem(key, JSON.stringify(utenti))
     console.log(utenti)
   }
 })
